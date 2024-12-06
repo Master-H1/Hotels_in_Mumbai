@@ -1,0 +1,82 @@
+<resources>
+    <string name="app_name">Hotels in Mumbai</string>
+    <string name="not_applied">(Not Applied)</string>
+    <string name="sort_by">Sort by</string>
+    <string name="hotels_in_mumbai">Hotels in Mumbai</string>
+    <string name="mobile_special_discount">Mobile Special Discount</string>
+    <string name="use_code_htlmob10">Use code HTLMOB10 to get amazing discount on all hotels bookings!</string>
+    <string name="date_to">02 Aug, 13 – 03 Aug,13</string>
+    <string name="nigh_11_roo">01 Night 11 Room</string>
+    <string name="filters">Filters</string>
+    <string name="price_high_to">Price (High to Low)</string>
+    <string name="jw_marriott">JW Marriott, Mumbai</string>
+    <string name="juhu">Juhu</string>
+    <string name="_11_250">$11,250</string>
+    <string name="the_residency">The Residency</string>
+    <string name="international_airport">International Airport</string>
+    <string name="_5_star">5 star</string>
+    <string name="_11_000">$11,000</string>
+    <string name="todo">TODO</string>
+    <string name="grand_hyatt_mun">Grand Hyatt Mun…</string>
+    <string name="domestic_airport">Domestic Airport</string>
+    <string name="_10_500">$10,500</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hotel_form">Hotel Food Form</string>
+    <string name="food_categories">Food Categories List</string>
+
+    <string-array name="sort_items">
+        <item>Price (High to Low)</item>
+        <item>Hotel names</item>
+    </string-array>
+
+    <!--    discounted text-->
+    <string name="deleted_price"><![CDATA[<s>$13,336</s>]]></string>
+
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="food_category">Food category:</string>
+    <string name="save">SAVE FOOD</string>
+    <string name="vegetarian">Vegetarian</string>
+    <string name="_200">200</string>
+    <string name="south_indian_food">South Indian Food</string>
+    <string name="_1">1</string>
+    <string name="is_it_vegetarian">Is it vegetarian?</string>
+    <string name="enter_food_name">Enter food name</string>
+    <string name="food_name">Food Name:</string>
+    <string name="price">Price:</string>
+    <string name="enter_price_of_food">Enter price of food</string>
+    <string name="food_details"> Details</string>
+    <string name="vegetarian_type">Vegetarian Type:</string>
+    <string name="is_it_vegetarian1">Is it vegetarian?:</string>
+    <string name="food_price">Food Price: $</string>
+    <string name="food_category1">Food Category:</string>
+    <string name="food_id">Food ID:</string>
+    <string name="food_fragment_activity">Food Fragment Activity</string>
+    <string name="food_networked_activity">Food Networked Activity</string>
+    <string name="list_of_available_foods">List of Available Foods</string>
+    <string name="go_networked_activity">Go Networked Activity</string>
+    <string name="is_vegetarian">Is vegetarian?:</string>
+    <string name="category">Category:</string>
+    <string name="pizza">Pizza</string>
+    <string name="price1">Price: $</string>
+    <string name="no_data_found">No Data Found!</string>
+    <string name="no_foods_available">No Foods Available..!</string>
+
+    <string-array name="food_categories">
+        <item>Select food category</item>
+        <item>Veg food</item>
+        <item>Non veg food</item>
+        <item>Chinese food</item>
+        <item>North Indian food</item>
+        <item>South Indian food </item>
+        <item>Sweet food</item>
+        <item>Desserts</item>
+        <item>Beverages</item>
+        <item>Snacks</item>
+        <item>Pizza</item>
+        <item>Pasta</item>
+        <item>Salad</item>
+        <item>Sandwich</item>
+    </string-array>
+</resources>

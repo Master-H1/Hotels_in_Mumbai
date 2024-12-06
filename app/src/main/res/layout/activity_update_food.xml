@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UpdateFoodActivity"
+    android:background="@drawable/arrow_bg">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/frag_act_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_viewpager_bg">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/todo"
+            android:id="@+id/backFromFoodUpdate"
+            android:src="@drawable/ic_back_arrow" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Update Details of "
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Foods Details"
+            android:id="@+id/food_details"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            tools:ignore="HardcodedText" />
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="6dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_name"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_food_name_update"
+            android:autofillHints=""
+            android:padding="10sp"
+            android:hint="@string/enter_food_name"
+            android:background="@drawable/reserve_food_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/food_category"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <androidx.appcompat.widget.AppCompatSpinner
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_food_category_update"
+            android:padding="8dp"
+            android:entries="@array/food_categories"
+            android:background="@drawable/reserve_food_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="5dp"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_food_price_update"
+            android:autofillHints=""
+            android:padding="10sp"
+            android:hint="@string/enter_price_of_food"
+            android:inputType="number"
+            android:background="@drawable/reserve_food_bg"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/vegetarian_type"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="10dp"/>
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/is_it_vegetarian_update"
+            android:text="@string/is_it_vegetarian"
+            android:background="@drawable/reserve_food_bg"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/grey"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/update_food"
+            android:text="UPDATE"
+            android:backgroundTint="@color/blue"
+            android:textColor="@color/white"
+            android:elevation="10dp"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="10dp"/>
+    </LinearLayout>
+
+</LinearLayout>

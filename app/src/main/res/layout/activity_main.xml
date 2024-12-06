@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolbar"
+        app:navigationIcon="@drawable/ic_home"
+        app:title="@string/hotels_in_mumbai"
+        app:titleTextColor="@color/white"
+        android:background="@drawable/toolbar_viewpager_bg"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@+id/toolbar">
+
+        <!--  part 2  -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/aler_bg"
+            android:padding="1dp"
+            android:layout_marginStart="3dp"
+            android:layout_marginEnd="3dp"
+            android:id="@+id/alert_body"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="90"
+                android:padding="8dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/mobile_special_discount"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:textColor="@color/red"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:text="@string/use_code_htlmob10"
+                    android:id="@+id/alertDescription"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="10">
+                <ImageButton
+                    android:id="@+id/closeButton"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:layout_marginTop="10dp"
+                    android:contentDescription="@string/todo"
+                    android:src="@drawable/ic_close_btn"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:background="@drawable/close_btn_bg"
+                    android:padding="12dp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--   part  3-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp">
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/goHome"
+                android:layout_weight="10"
+                android:contentDescription="@string/todo"
+                android:padding="15dp"
+                android:src="@drawable/ic_back_arrow"
+                android:background="@drawable/arrow_bg"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="80"
+                android:orientation="vertical"
+                android:padding="5dp"
+                android:background="@drawable/arrow_bg">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/date_to"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/nigh_11_roo"
+                    android:textColor="@color/grey"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- part 4   -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:baselineAligned="false"
+            android:orientation="horizontal"
+            android:layout_marginTop="7dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="5dp"
+                android:layout_weight="5"
+                android:background="@drawable/arrow_bg"
+                android:orientation="vertical"
+                android:padding="5dp">
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="28dp"
+                    android:checked="true"
+                    android:enabled="false"
+                    android:text="@string/filters"
+                    android:textColor="@color/blue"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/not_applied"
+                    android:layout_marginStart="20sp"
+                    android:textSize="14sp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:orientation="horizontal"
+                android:padding="9dp"
+                android:background="@drawable/arrow_bg">
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="5"
+                    tools:ignore="NestedWeights">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/sort_by"
+                        android:textStyle="bold"
+                        android:textColor="@color/grey"/>
+                    <Spinner
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        style="@style/Widget.AppCompat.Spinner.DropDown.ActionBar"
+                        android:entries="@array/sort_items"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <!--    Hotels list 1-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/arrow_bg">
+
+            <ImageView
+                android:id="@+id/itemImage"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/hotel1" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:id="@+id/hotel1txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jw_marriott"
+                        android:freezesText="true"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/owner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/juhu"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/hotel_icon"/>
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="4.5"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:theme="@style/MyRatingBar"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_5_star"
+                        android:layout_gravity="right"
+                        android:textStyle="bold"
+                        tools:ignore="HardcodedText,RtlHardcoded" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/discountedPrice"
+                        android:text="@string/deleted_price"
+                        android:layout_gravity="right"
+                        tools:ignore="RtlHardcoded" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_11_250"
+                        android:textColor="@color/red"
+                        android:layout_gravity="right"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!--   Hotel list2-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/arrow_bg">
+            <ImageView
+                android:id="@+id/hotel2Image"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/hotel2" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+                    <TextView
+                        android:id="@+id/hotel2txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/the_residency"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/owner1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/international_airport"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/hotel_icon"/>
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="4"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:theme="@style/MyRatingBar"/>
+                    </LinearLayout>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_5_star"
+                        android:layout_gravity="right"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_11_000"
+                        android:layout_marginTop="50dp"
+                        android:textColor="@color/red"
+                        android:layout_gravity="right"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <!--    Hotel list 3-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:background="@drawable/arrow_bg">
+
+            <ImageView
+                android:id="@+id/itemImage2"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/todo"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/hotel3" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:baselineAligned="false"
+                android:orientation="horizontal">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <TextView
+                        android:id="@+id/hotelName2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/grand_hyatt_mun"
+                        android:textStyle="bold"
+                        android:textColor="@color/blue"
+                        android:textSize="16sp" />
+                    <TextView
+                        android:id="@+id/owner2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/domestic_airport"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="center_vertical"
+                            android:src="@mipmap/hotel_icon"/>
+
+                        <androidx.appcompat.widget.AppCompatRatingBar
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:isIndicator="false"
+                            android:numStars="5"
+                            android:rating="4.5"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:theme="@style/MyRatingBar"/>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="2">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_5_star"
+                        android:layout_gravity="right"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/_10_500"
+                        android:layout_marginTop="50dp"
+                        android:textColor="@color/red"
+                        android:layout_gravity="right"
+                        android:textStyle="bold"
+                        tools:ignore="RtlHardcoded" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/goNetworkedActivity"
+        android:text="@string/go_networked_activity"
+        android:textColor="@color/whiteGrey"
+        android:padding="10dp"
+        android:background="@drawable/toolbar_viewpager_bg"
+        android:layout_marginStart="10dp"
+        android:layout_marginBottom="15dp"
+        app:elevation="10dp"
+        app:rippleColor="@color/grey"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/floatingAddButton"
+        android:src="@drawable/ic_add"
+        android:backgroundTint="@color/blue"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        app:elevation="10dp"
+        app:rippleColor="@color/grey"/>
+
+
+</RelativeLayout>
